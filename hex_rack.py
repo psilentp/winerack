@@ -9,13 +9,13 @@ import numpy as np
 from numpy import pi,cos,sin,tan,dot
 from numpy import pi,cos,sin,tan,dot,degrees
 laser_kerf = 0.15
-inside_rad = 55.0
+inside_rad = 45.0
 wall_thick = 20.0 + (2 * laser_kerf)
 cutout_depth = wall_thick/2.0 - laser_kerf
 material_thick = 6.95 ###check me
 sep = (304.8 - material_thick)/3.0
 front_thick = 2*material_thick
-dowel_rad = 6.45/2 - laser_kerf#3/8"
+dowel_rad = 9.75/2 - laser_kerf#3/8"
 hex_y = lambda rad: rad*tan(pi/6)
 hex_rad = lambda rad: np.linalg.norm(np.array([rad,hex_y(rad)]))
 wall_len = lambda rad: 2*rad*sin(pi/6)
@@ -23,8 +23,8 @@ shift_dist = lambda d: d / (1+ 1/(cos(pi/6.0)))
 shift = shift_dist(hex_rad(inside_rad+wall_thick) - hex_rad(inside_rad))*cos(pi/6)
 num_rows = 2
 num_cols = 4
-num_nubins = 2
-nubin_d = 0.10
+#num_nubins = 2
+#nubin_d = 0.20
 
 
 def to_hex_coord(row,col):
@@ -105,7 +105,7 @@ def make_row(row_num):
         tx = row_mod+(inside_rad+wall_thick)*hex_num
         ty = (inside_rad+wall_thick)*2*cos(pi/6)*row_num
         hex_group.add(hex)
-        for h in make_hexes(inside_rad+shift,dowel_rad):
+        for h in make_circles(inside_rad+shift,dowel_rad):
             hex_group.add(h)
         tx = (row_mod+(inside_rad+wall_thick)*hex_num)*2
         ty = (inside_rad+wall_thick)*2*cos(pi/6)*row_num
