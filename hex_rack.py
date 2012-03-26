@@ -23,7 +23,7 @@ hex_rad = lambda rad: np.linalg.norm(np.array([rad,hex_y(rad)]))
 wall_len = lambda rad: 2*rad*sin(pi/6)
 shift_dist = lambda d: d / (1+ 1/(cos(pi/6.0)))
 shift = shift_dist(hex_rad(inside_rad+wall_thick) - hex_rad(inside_rad))*cos(pi/6)
-num_rows = 2
+num_rows = 3
 num_cols = 4
 #num_nubins = 2
 #nubin_d = 0.20
@@ -157,7 +157,7 @@ def make_row(row_num):
             fill='none',
             stroke='black',
             stroke_width = 1)
-        tx = (inside_rad+wall_thick)*3
+        tx = (inside_rad+wall_thick)*4
         ty = (inside_rad+wall_thick)*2*cos(pi/6)*(row_num+1)
         bottom_cut.translate(tx = tx, ty = ty)
         items.append(bottom_cut)
