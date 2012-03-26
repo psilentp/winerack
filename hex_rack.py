@@ -15,7 +15,9 @@ cutout_depth = wall_thick/2.0 - laser_kerf
 material_thick = 6.95 ###check me
 sep = (304.8 - material_thick)/3.0
 front_thick = 2*material_thick
-dowel_rad = 9.75/2 - laser_kerf#3/8"
+dowel_rad = 9.6/2 - laser_kerf
+hex_stop_rad = 15.0/2.0
+stop_space = 5.0
 hex_y = lambda rad: rad*tan(pi/6)
 hex_rad = lambda rad: np.linalg.norm(np.array([rad,hex_y(rad)]))
 wall_len = lambda rad: 2*rad*sin(pi/6)
@@ -107,6 +109,16 @@ def make_row(row_num):
         hex_group.add(hex)
         for h in make_circles(inside_rad+shift,dowel_rad):
             hex_group.add(h)
+        inner_stops,outer_stops = stop_pattern(hex_stop_rad,stop_space)
+        inner_stop_group = dwg.g()
+        for item in inner_stops:
+            inner_stop_group.add(item)
+        outer_stop_group = dwg.g()
+        for item in outer_stops:
+            outer_stop_group.add(item)
+        inner_stop_group.rotate(degrees(pi/6))
+        hex_group.add(inner_stop_group)
+        hex_group.add(outer_stop_group)
         tx = (row_mod+(inside_rad+wall_thick)*hex_num)*2
         ty = (inside_rad+wall_thick)*2*cos(pi/6)*row_num
 
@@ -205,6 +217,15 @@ def add_cutouts(coord,orient):
         cutout.rotate(degrees((i*2 + orient)*pi/3),center = (inside_rad*-1,0.5*material_thick))
         dwg.add(cutout)
 
+def stop_pattern(stop_rad,space_rad):
+    inner_hexes = make_hexes(cos(pi/6)*(stop_rad*2.0+ space_rad) ,stop_rad)
+    for h in inner_hexes:
+        h.rotate(degrees(pi/6))
+    outer_hexes = make_hexes(cos(pi/6)*(stop_rad*2.0+space_rad)+stop_rad+space_rad ,stop_rad)
+    #for h in outer_hexes:
+    #    h.rotate(degrees(pi/6))
+    hexes = (inner_hexes,outer_hexes)
+    return hexes
 
 def make_rail():
     cutouts = [make_cutout() for x in range(4)]
@@ -233,14 +254,18 @@ if __name__ == '__main__':
         stroke='black',
         stroke_width = 1,
         r=20)
-    add_cutouts((1,1),0)
-    add_cutouts((1,2),1)
-    add_cutouts((1,3),2)
-    add_cutouts((1,4),3)
-    add_cutouts((2,1),4)
-    add_cutouts((2,2),5)
-    add_cutouts((2,3),1)
-    add_cutouts((2,4),2)
-    add_cutouts((2,5),3)
-    dwg.add(make_rail())
+
+    #dwg.add(inner_stop_group)
+    #dwg.add(outer_stop_group)
+    #dwg.add(stop_pattern(dowel_rad,2.0))
+    #add_cutouts((1,1),0)
+    #add_cutouts((1,2),1)
+    #add_cutouts((1,3),2)
+    #add_cutouts((1,4),3)
+    #add_cutouts((2,1),4)
+    #add_cutouts((2,2),5)
+    #add_cutouts((2,3),1)
+    #add_cutouts((2,4),2)
+    #add_cutouts((2,5),3)
+    #dwg.add(make_rail())
     dwg.save()
