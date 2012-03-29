@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4634c93b-a512-4425-88e2-2d7a77289e53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hex_rack.py" afterPath="$PROJECT_DIR$/hex_rack.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.svg" afterPath="$PROJECT_DIR$/test.svg" />
     </list>
     <ignored path="winerack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hex_rack.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hex_rack.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hex_rack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.91764706">
-              <folding>
-                <element signature="e#75#90#0" expanded="true" />
-              </folding>
+            <state line="9" column="40" selection-start="211" selection-end="211" vertical-scroll-proportion="-4.3076925">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="engraving_idea.svg" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/engraving_idea.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="10" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.41512915">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,15 +58,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/test.svg" />
         <option value="$PROJECT_DIR$/hex_rack.py" />
+        <option value="$PROJECT_DIR$/engraving_idea.svg" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="101" />
-    <option name="y" value="89" />
-    <option name="width" value="1440" />
-    <option name="height" value="832" />
+    <option name="x" value="41" />
+    <option name="y" value="31" />
+    <option name="width" value="1520" />
+    <option name="height" value="923" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -209,20 +218,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="89" width="1440" height="832" extended-state="0" />
-    <editor active="false" />
+    <frame x="41" y="31" width="1520" height="923" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25431034" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24456522" sideWeight="0.70771146" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29228857" sideWeight="0.5006794" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29228857" sideWeight="0.49456522" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.4972826" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -266,7 +275,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="code for test cuts of winerack." />
+    <option name="LAST_COMMIT_MESSAGE" value="idea for engraving" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -281,17 +290,39 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="adding file" />
     <MESSAGE value="code for test cuts of winerack." />
+    <MESSAGE value="Reverting to all dowel mode" />
+    <MESSAGE value="Added the stops, they are arranged in a nice pattern in the inside of the large hex cutouts. Check to see how much this will cost." />
+    <MESSAGE value="Started adding a cutout for a support rail at the bottom. Noticed that shifting the dowels to the center of support, results in an offset in overlapping hexes. Probably unacceptable. Creating a branch to deal with it." />
+    <MESSAGE value="Removed shift to fix offset, started working on engraving." />
+    <MESSAGE value="idea for engraving" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/7.2/lib/python2.7/site-packages/numpy/core/numeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="24" selection-start="5090" selection-end="5100" vertical-scroll-proportion="0.38745388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hex_rack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.91764706">
-          <folding>
-            <element signature="e#75#90#0" expanded="true" />
-          </folding>
+        <state line="9" column="40" selection-start="211" selection-end="211" vertical-scroll-proportion="-4.3076925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engraving_idea.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.41512915">
+          <folding />
         </state>
       </provider>
     </entry>
