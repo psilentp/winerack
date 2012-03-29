@@ -244,12 +244,35 @@ def make_rail():
     [rail.add(c) for c in cutouts]
     return rail
 
+def make_bottom_stand():
+    stand = dwg.g()
+    circ1 = dwg.circle(fill='none',
+                        stroke = 'black',
+                        stroke_width = 1,
+                        r=dowel_rad)
+    circ2 = dwg.circle(fill='none',
+        stroke = 'black',
+        stroke_width = 1,
+        r=dowel_rad)
+    circ1.translate(tx = 0.5*wall_thick,ty=(inside_rad+0.5*wall_thick)*2)
+    circ2.translate(tx = 0.5*wall_thick,ty=(inside_rad+0.5*wall_thick)*4)
+    stand.add(circ1)
+    stand.add(circ2)
+    stand_rect = dwg.rect(size=(wall_thick,6*(inside_rad+0.5*wall_thick)),
+        ry = wall_thick/5,
+        fill='none',
+        stroke='black',
+        stroke_width = 1)
+    stand.add(stand_rect)
+    return stand
+
 if __name__ == '__main__':
     dwg = svgwrite.Drawing('test.svg',size=(200*mm,200*mm),viewBox = '0 0 200 200')
     for row in range(num_rows+1)[1:]:
         items = make_row(row)
         for item in items:
             dwg.add(item)
+    dwg.add(make_bottom_stand())
     circ = dwg.circle(fill='none',
         stroke='black',
         stroke_width = 1,
