@@ -165,6 +165,23 @@ def make_row(row_num):
         items.append(bottom_cut)
     return items
 
+def zag_row(rad,num):
+    p1 = np.array([rad,rad*tan(pi/6),0])
+    r_mat = rotation_matrix(np.array([0,0,1]),pi/3)
+    p2 = dot(r_mat,p1)
+    p3 = dot(r_mat,p2)
+    p4 = dot(r_mat,p3)
+    first_seg = [(p[0],p[1]) for p in [p3,p2]]
+    pts = []
+    pts.extend([(p4[0],p4[1])])
+    for rep in range(num):
+        pts.extend([(pt[0] + 2*(rep * rad),pt[1])
+        for pt in first_seg])
+    return dwg.polyline(pts,
+        fill='none',
+        stroke='black',
+        stroke_width = 1)
+
 def tesselate_segment(rad,num, add_start= True ,add_end = True):
     p1 = np.array([rad,rad*tan(pi/6),0])
     r_mat = rotation_matrix(np.array([0,0,1]),pi/3)
@@ -275,6 +292,21 @@ if __name__ == '__main__':
         for item in items:
             dwg.add(item)
     dwg.add(make_bottom_stand())
+    l = 10.0
+    dwg.add(zag_row(l,2))
+
+    r = zag_row(l,3)
+    r.translate(tx=-1*l,ty = hex_rad(l) + hex_y(l)); dwg.add(r)
+
+    r = zag_row(l,3)
+    r.rotate(180); r.translate(tx=-3*l,ty=-1*hex_rad(l) - hex_y(l)); dwg.add(r)
+
+    r = zag_row(l,2)
+    r.rotate(180); r.translate(tx=-2*l,ty=-2*(hex_rad(l) + hex_y(l))); dwg.add(r)
+
+    r = zag_row(l,1)
+    r.rotate(180); r.translate(tx=-1*l,ty=-3*(hex_rad(l) + hex_y(l))); dwg.add(r)
+
     circ = dwg.circle(fill='none',
         stroke='black',
         stroke_width = 1,
