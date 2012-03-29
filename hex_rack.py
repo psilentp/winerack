@@ -107,7 +107,9 @@ def make_row(row_num):
         tx = row_mod+(inside_rad+wall_thick)*hex_num
         ty = (inside_rad+wall_thick)*2*cos(pi/6)*row_num
         hex_group.add(hex)
-        for h in make_circles(inside_rad+shift,dowel_rad):
+        #for h in make_circles(inside_rad+shift,dowel_rad):
+        #    hex_group.add(h)
+        for h in make_circles(inside_rad+0.5*wall_thick,dowel_rad):
             hex_group.add(h)
         inner_stops,outer_stops = stop_pattern(hex_stop_rad,stop_space)
         inner_stop_group = dwg.g()
