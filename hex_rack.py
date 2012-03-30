@@ -285,6 +285,37 @@ def make_bottom_stand():
     stand.add(stand_rect)
     return stand
 
+def make_grape():
+    kwds = {'start':None,'end':None,'fill':'none','stroke':'black','stroke_width':1}
+    l = 10.0
+    grape = dwg.g()
+
+    def mklns(n,tx,ty):
+        for x in range(n):
+            kwds['start'] = (l*x*2,0);kwds['end'] = (l*x*2,-2*hex_y(l))
+            vert = dwg.line(**kwds)
+            vert.translate(tx = tx*l,ty=ty*hex_y(l))
+            grape.add(vert)
+
+    grape.add(zag_row(l,2))
+    mklns(3,-1,1)
+
+    r = zag_row(l,3)
+    r.translate(tx=-1*l,ty = hex_rad(l) + hex_y(l)); grape.add(r)
+    mklns(4,-2,4)
+
+    r = zag_row(l,3)
+    r.rotate(180); r.translate(tx=-3*l,ty=-1*hex_rad(l) - hex_y(l)); grape.add(r)
+    mklns(3,-1,7)
+
+    r = zag_row(l,2)
+    r.rotate(180); r.translate(tx=-2*l,ty=-2*(hex_rad(l) + hex_y(l))); grape.add(r)
+
+    r = zag_row(l,1)
+    r.rotate(180); r.translate(tx=-1*l,ty=-3*(hex_rad(l) + hex_y(l))); grape.add(r)
+    mklns(2,0,10)
+    return grape
+
 if __name__ == '__main__':
     dwg = svgwrite.Drawing('test.svg',size=(200*mm,200*mm),viewBox = '0 0 200 200')
     for row in range(num_rows+1)[1:]:
@@ -292,37 +323,10 @@ if __name__ == '__main__':
         for item in items:
             dwg.add(item)
     dwg.add(make_bottom_stand())
-    l = 10.0
-    dwg.add(zag_row(l,2))
-
-    r = zag_row(l,3)
-    r.translate(tx=-1*l,ty = hex_rad(l) + hex_y(l)); dwg.add(r)
-
-    r = zag_row(l,3)
-    r.rotate(180); r.translate(tx=-3*l,ty=-1*hex_rad(l) - hex_y(l)); dwg.add(r)
-
-    r = zag_row(l,2)
-    r.rotate(180); r.translate(tx=-2*l,ty=-2*(hex_rad(l) + hex_y(l))); dwg.add(r)
-
-    r = zag_row(l,1)
-    r.rotate(180); r.translate(tx=-1*l,ty=-3*(hex_rad(l) + hex_y(l))); dwg.add(r)
+    dwg.add(make_grape())
 
     circ = dwg.circle(fill='none',
         stroke='black',
         stroke_width = 1,
         r=20)
-
-    #dwg.add(inner_stop_group)
-    #dwg.add(outer_stop_group)
-    #dwg.add(stop_pattern(dowel_rad,2.0))
-    #add_cutouts((1,1),0)
-    #add_cutouts((1,2),1)
-    #add_cutouts((1,3),2)
-    #add_cutouts((1,4),3)
-    #add_cutouts((2,1),4)
-    #add_cutouts((2,2),5)
-    #add_cutouts((2,3),1)
-    #add_cutouts((2,4),2)
-    #add_cutouts((2,5),3)
-    #dwg.add(make_rail())
     dwg.save()
