@@ -285,6 +285,47 @@ def make_bottom_stand():
     stand.add(stand_rect)
     return stand
 
+def make_leaf():
+    kwds = {'start':None,'end':None,'fill':'none','stroke':'black','stroke_width':1}
+    l = 10.0
+    leaf = dwg.g()
+    def mklns(n,tx,ty):
+        for x in range(n):
+            kwds['start'] = (l*x*2,0);kwds['end'] = (l*x*2,-2*hex_y(l))
+            vert = dwg.line(**kwds)
+            vert.translate(tx = tx*l,ty=ty*hex_y(l))
+            leaf.add(vert)
+
+    r = zag_row(l,4)
+    r.translate(tx=-2*l,ty = hex_rad(l) + hex_y(l)); leaf.add(r)
+    leaf.add(r)
+    mklns(5,-3,4)
+
+    r = zag_row(l,7)
+    r.translate(tx=-5*l,ty = 2*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    leaf.add(r)
+    mklns(8,-6,7)
+
+    r = zag_row(l,8)
+    r.translate(tx=-6*l,ty = 3*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    leaf.add(r)
+    mklns(9,-7,10)
+
+    r = zag_row(l,9)
+    r.translate(tx=-7*l,ty = 4*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    leaf.add(r)
+    mklns(10,-8,13)
+
+    r = zag_row(l,9)
+    r.rotate(180);r.translate(tx=-9*l,ty = -4*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    leaf.add(r)
+    mklns(7,-5,16)
+
+
+
+
+    return leaf
+
 def make_grape():
     kwds = {'start':None,'end':None,'fill':'none','stroke':'black','stroke_width':1}
     l = 10.0
@@ -323,7 +364,8 @@ if __name__ == '__main__':
         for item in items:
             dwg.add(item)
     dwg.add(make_bottom_stand())
-    dwg.add(make_grape())
+    #dwg.add(make_grape())
+    dwg.add(make_leaf())
 
     circ = dwg.circle(fill='none',
         stroke='black',
