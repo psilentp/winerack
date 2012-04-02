@@ -298,31 +298,47 @@ def make_leaf():
 
     r = zag_row(l,4)
     r.translate(tx=-2*l,ty = hex_rad(l) + hex_y(l)); leaf.add(r)
-    leaf.add(r)
     mklns(5,-3,4)
 
     r = zag_row(l,7)
     r.translate(tx=-5*l,ty = 2*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
-    leaf.add(r)
     mklns(8,-6,7)
 
     r = zag_row(l,8)
     r.translate(tx=-6*l,ty = 3*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
-    leaf.add(r)
     mklns(9,-7,10)
 
     r = zag_row(l,9)
     r.translate(tx=-7*l,ty = 4*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
-    leaf.add(r)
     mklns(10,-8,13)
 
     r = zag_row(l,9)
     r.rotate(180);r.translate(tx=-9*l,ty = -4*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
-    leaf.add(r)
     mklns(7,-5,16)
 
+    r = zag_row(l,7)
+    r.translate(tx=-5*l,ty = 6*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    mklns(8,-6,19)
 
+    r = zag_row(l,8)
+    r.translate(tx=-6*l,ty = 7*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    mklns(9,-7,22)
 
+    r = zag_row(l,8)
+    r.rotate(180);r.translate(tx=-8*l,ty = -7*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    mklns(4,-2,25)
+
+    r = zag_row(l,3)
+    r.rotate(180);r.translate(tx=-3*l,ty = -8*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    mklns(3,-1,28)
+
+    r = zag_row(l,2)
+    r.rotate(180);r.translate(tx=-2*l,ty = -9*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    mklns(2,0,31)
+
+    r = zag_row(l,1)
+    r.rotate(180);r.translate(tx=-1*l,ty = -10*(hex_rad(l) + hex_y(l)) ); leaf.add(r)
+    #mklns(2,0,31)
 
     return leaf
 
@@ -359,16 +375,11 @@ def make_grape():
 
 if __name__ == '__main__':
     dwg = svgwrite.Drawing('test.svg',size=(200*mm,200*mm),viewBox = '0 0 200 200')
-    for row in range(num_rows+1)[1:]:
-        items = make_row(row)
-        for item in items:
-            dwg.add(item)
-    dwg.add(make_bottom_stand())
-    #dwg.add(make_grape())
-    dwg.add(make_leaf())
-
-    circ = dwg.circle(fill='none',
-        stroke='black',
-        stroke_width = 1,
-        r=20)
+    #for row in range(num_rows+1)[1:]:
+    #    items = make_row(row)
+    #    for item in items:
+    #        dwg.add(item)
+    #dwg.add(make_bottom_stand())
+    dwg.add(make_grape())
+    #dwg.add(make_leaf())
     dwg.save()

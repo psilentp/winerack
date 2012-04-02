@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4634c93b-a512-4425-88e2-2d7a77289e53" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hex_rack.py" afterPath="$PROJECT_DIR$/hex_rack.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.svg" afterPath="$PROJECT_DIR$/test.svg" />
     </list>
@@ -28,19 +29,10 @@
       <file leaf-file-name="hex_rack.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hex_rack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="316" column="16" selection-start="10395" selection-end="10395" vertical-scroll-proportion="0.34911242">
+            <state line="370" column="20" selection-start="11957" selection-end="11957" vertical-scroll-proportion="5.3339586">
               <folding>
                 <element signature="e#75#90#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.svg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -67,8 +59,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="377" />
-    <option name="y" value="46" />
+    <option name="x" value="726" />
+    <option name="y" value="98" />
     <option name="width" value="1411" />
     <option name="height" value="909" />
   </component>
@@ -149,7 +141,9 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hex_rack.py" />
       <option name="PARAMETERS" value="" />
       <option name="MULTIPROCESS" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -220,18 +214,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="377" y="46" width="1411" height="909" extended-state="0" />
-    <editor active="false" />
+    <frame x="726" y="98" width="1411" height="909" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24871607" sideWeight="0.70886075" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25752017" sideWeight="0.70886075" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.49743214" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29113925" sideWeight="0.50330156" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29113925" sideWeight="0.49156272" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29113925" sideWeight="0.51210564" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29113925" sideWeight="0.4827586" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.4972826" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -277,7 +271,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea for engraving" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on leaf" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -297,6 +291,7 @@
     <MESSAGE value="Started adding a cutout for a support rail at the bottom. Noticed that shifting the dowels to the center of support, results in an offset in overlapping hexes. Probably unacceptable. Creating a branch to deal with it." />
     <MESSAGE value="Removed shift to fix offset, started working on engraving." />
     <MESSAGE value="idea for engraving" />
+    <MESSAGE value="working on leaf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -304,9 +299,7 @@
   <component name="editorHistoryManager">
     <entry file="file:///Library/Frameworks/Python.framework/Versions/7.2/lib/python2.7/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="24" selection-start="5090" selection-end="5100" vertical-scroll-proportion="0.38745388">
-          <folding />
-        </state>
+        <state line="160" column="24" selection-start="5090" selection-end="5100" vertical-scroll-proportion="0.38745388" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engraving_idea.svg">
@@ -316,14 +309,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hex_rack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="316" column="16" selection-start="10395" selection-end="10395" vertical-scroll-proportion="0.34911242">
+        <state line="370" column="20" selection-start="11957" selection-end="11957" vertical-scroll-proportion="5.3339586">
           <folding>
             <element signature="e#75#90#0" expanded="true" />
           </folding>
