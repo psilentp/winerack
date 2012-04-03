@@ -9,7 +9,7 @@ import numpy as np
 from numpy import pi,cos,sin,tan,dot
 from numpy import pi,cos,sin,tan,dot,degrees
 laser_kerf = 0.15
-inside_rad = 45.0
+inside_rad = 46.0
 wall_thick = 20.0 + (2 * laser_kerf)
 cutout_depth = wall_thick/2.0 - laser_kerf
 material_thick = 6.95 ###check me
@@ -265,6 +265,7 @@ def make_rail():
 
 def make_bottom_stand():
     stand = dwg.g()
+    stand_thick = hex_rad(wall_thick)
     circ1 = dwg.circle(fill='none',
                         stroke = 'black',
                         stroke_width = 1,
@@ -273,12 +274,12 @@ def make_bottom_stand():
         stroke = 'black',
         stroke_width = 1,
         r=dowel_rad)
-    circ1.translate(tx = 0.5*wall_thick,ty=(inside_rad+0.5*wall_thick)*2)
-    circ2.translate(tx = 0.5*wall_thick,ty=(inside_rad+0.5*wall_thick)*4)
+    circ1.translate(tx = 0.5*stand_thick,ty=(inside_rad+0.5*wall_thick)*2)
+    circ2.translate(tx = 0.5*stand_thick,ty=(inside_rad+0.5*wall_thick)*4)
     stand.add(circ1)
     stand.add(circ2)
-    stand_rect = dwg.rect(size=(wall_thick,6*(inside_rad+0.5*wall_thick)),
-        ry = wall_thick/5,
+    stand_rect = dwg.rect(size=(stand_thick,6*(inside_rad+0.5*stand_thick)),
+        ry = stand_thick/5,
         fill='none',
         stroke='black',
         stroke_width = 1)
@@ -375,11 +376,11 @@ def make_grape():
 
 if __name__ == '__main__':
     dwg = svgwrite.Drawing('test.svg',size=(200*mm,200*mm),viewBox = '0 0 200 200')
-    #for row in range(num_rows+1)[1:]:
-    #    items = make_row(row)
-    #    for item in items:
-    #        dwg.add(item)
-    #dwg.add(make_bottom_stand())
-    dwg.add(make_grape())
+    for row in range(num_rows+1)[1:]:
+        items = make_row(row)
+        for item in items:
+            dwg.add(item)
+    dwg.add(make_bottom_stand())
+    #dwg.add(make_grape())
     #dwg.add(make_leaf())
     dwg.save()
